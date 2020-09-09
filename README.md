@@ -1,3 +1,3 @@
-# react-from-scratch
+# skeleton-ui
 
-This is a project which aims at understanding what does create-react-app do for us.
+Simple to modify and adapt to your own project.
