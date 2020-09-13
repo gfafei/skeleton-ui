@@ -1,7 +1,6 @@
 import React from 'react'
 import {hot} from "react-hot-loader";
-import './App.css';
-import ButtonDemo from '../components/button/demo'
+import './App.less';
 import * as Demos from './Demo'
 import Router from '../components/router'
 
@@ -11,14 +10,14 @@ const App = () => {
       <div className="app-menu">
         {
           Object.keys(Demos).map(demo => (
-            <a href={`#${demo}`}>{demo}</a>
+            <a key={demo} className="menu-item" href={`#${demo}`}>{demo}</a>
           ))
         }
       </div>
-      <div className="main">
+      <div className="app-main">
         {
           Object.values(Demos).map(Demo => (
-            <Router path={`#${Demo.name}`}>{<Demo />}</Router>
+            <Router key={Demo.name} path={`#${Demo.name}`}>{<Demo />}</Router>
           ))
         }
       </div>

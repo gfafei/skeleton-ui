@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 const Router = (props) => {
   const { path, children } = props
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(location.hash === path)
   useEffect(() => {
     const handler = () => {
       setVisible(location.hash === path)
